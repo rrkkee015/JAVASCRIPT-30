@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>CSS Variables</title>
+</head>
+
+<body>
+  <h2>Update CSS Variables with <span class="h1">JS</span></h2>
+
+  <div class="controls">
+    <label for="spacing">Spacing:</label>
+    <input type="range" id="spacing" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input type="range" id="blur" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+    <label for="base">Base Color</label>
+    <input type="color" id="base" name="base" value="#ffc600">
+  </div>
+  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+
+  <script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      // 이렇게 하면 'px' 혹은 ''을 가져온다. 색의 경우엔 px이 필요 없으니까.
+      const suffix = this.dataset.sizing || ''; // 태그 내의 data 속성을 다 가져온다. ex) data-name 등등
+
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+  </script>
+</body>
+
+</html>
