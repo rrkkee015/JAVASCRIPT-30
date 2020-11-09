@@ -29,8 +29,7 @@
     function handleUpdate() {
       // 이렇게 하면 'px' 혹은 ''을 가져온다. 색의 경우엔 px이 필요 없으니까.
       const suffix = this.dataset.sizing || ''; // 태그 내의 data 속성을 다 가져온다. ex) data-name 등등
-
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix); // tag 내의 속성을 가져올 수 있다.
     }
 
     inputs.forEach(input => input.addEventListener('change', handleUpdate));
