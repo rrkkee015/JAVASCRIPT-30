@@ -27,3 +27,6 @@
   6. 상위 객체에 의해 상속된 속성
 - 레이아웃 구성
   https://ofcourse.kr/css-course/%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EA%B5%AC%EC%84%B1
+- `display`의 속성인 `none`, `block`, `inline`, `inline-block`의 차이
+  https://ofcourse.kr/css-course/display-%EC%86%8D%EC%84%B1
+
