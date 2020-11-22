@@ -43,7 +43,7 @@
     }
 
     function displayMatches() {
-      // console.log(this.value); // 이런식으로 html tag를 받아와서 .tag를 하면 바로 그 내용을 받아올 수 있다.
+      // console.log(this.value); // 이런식으로 html tag를 받아와서 .value를 하면 바로 그 내용을 받아올 수 있다.
       const matchArray = findMatches(this.value, cities);
       const html = matchArray.map(place => {
         const regex = new RegExp(this.value, 'gi');
