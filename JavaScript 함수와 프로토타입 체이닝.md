@@ -10,5 +10,8 @@ https://ggodong.tistory.com/245
 
 
 ## 3. 함수의 다양한 형태
-
 https://ggodong.tistory.com/246
+
+
+## 4. 함수의 호출과 객체
+https://ggodong.tistory.com/247
